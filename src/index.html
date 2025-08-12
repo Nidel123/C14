@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en" class="overflow-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="overflow-hidden select-none font-primary bg-gradient-to-tr from-[#262E26] to-[#121212]"
+  >
+    <div
+      id="baseContainer"
+      class="relative overflow-hidden w-[900px] h-[540px] text-white"
+    >
+      <div
+        id="sideBar"
+        class="relative right-[129px] float-left w-[129px] h-[540px] rounded-r-[4px] bg-[#2A2E2A] shadow-black/50 shadow-[2px_0px_6px]/100 z-10"
+      >
+        <div
+          id="homeButtonContainer"
+          onclick="handleButtonClick('homeButtonContainer')"
+          class="relative float-left m-1 w-[32px] h-[31px] rounded-[8px] transition duration-100 ease-in-out hover:bg-[#90FF8D]/15 active:bg-[#90FF8D]/9"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="relative size-6 m-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          id="legalNoticeContainer"
+          class="relative group inline-block float-left -left-1 m-1 w-[32px] h-[31px] rounded-[8px] transition duration-100 ease-in-out hover:bg-[#90FF8D]/15 active:bg-[#90FF8D]/9"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="relative size-6 m-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+            />
+          </svg>
+          <div
+            class="absolute w-[200px] h-[75px] text-[12px] left-10 top-2 px-2 py-1 bg-[#2A2E2A]/60 text-white text-sm rounded-[8px] outline-[0.75px] outline-[#90FF8D]/60 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap shadow-black/80 shadow-[6px_6px_3px]"
+          >
+            <p>Name: Gebicke</p>
+            <p class="mb-1">Vorname: Finn</p>
+            <hr class="rounded-[8px]">
+            <p class="mt-1">Email: finn.gebicke@stud.kftg.ch</p>
+          </div>
+        </div>
+        <div
+          id="buttonContainer"
+          class="flex relative flex-col right-[50px] gap-[16px] ml-[2px] mt-[104px] text-[12px] text-white/90 content-center"
+        >
+          <button
+            id="calculatorButton"
+            onclick="handleButtonClick('calculatorButton')"
+            class="sidebarButton group"
+          >
+            <svg
+              id="calcIcon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-85 float-left transition-transform duration-200 group-hover:-rotate-12"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5ZM8.25 6h7.5v2.25h-7.5V6ZM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0 0 12 2.25Z"
+              />
+            </svg>
+            <p class="relative top-[2.75px] pr-[5px]">C14 Rechner</p>
+          </button>
+          <button
+            id="informationButton"
+            onclick="handleButtonClick('informationButton')"
+            class="sidebarButton group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 float-left pl-[2px] transition-transform duration-200 group-hover:-rotate-12"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+              />
+            </svg>
+
+            <p class="relative top-[2.75px] pr-[32px]">Theorie</p>
+          </button>
+          <button
+            id="exerciseButton"
+            onclick="handleButtonClick('exerciseButton')"
+            class="sidebarButton group"
+          >
+            <svg
+              id="exerciseIcon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 float-left pl-[2px] pb-[2px] transition-transform duration-200 group-hover:-rotate-12"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+              />
+            </svg>
+            <p class="relative top-[2.75px] pr-[25px]">Aufgaben</p>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mainFrame"
+        class="relative w-[774px] h-[540px] ml-[126px] bg-gradient-to-tr from-[#262E26] to-[#121212]"
+      >
+        <div
+          id="imageFrame"
+          class="absolute flex justify-center align-middle w-[774px] h-[540px]"
+        >
+          <img
+            src="/icons/leafNewer.svg"
+            alt="error while loading icon"
+            class="relative flex justify-center align-middle w-[439px] z-0 opacity-[12%]"
+          />
+        </div>
+        <div id="mainFrameContent">
+          <div id="textContainer" class="absolute">
+            <p
+              class="relative h-[540px] w-[774px] content-center text-center text-6xl text-white/15 font-bold z-10"
+            >
+              Willkommen
+            </p>
+            <p
+              class="absolute h-[540px] w-[774px] top-10 text-center content-center text-[20px] text-white/20"
+            >
+              Theorie. Rechner. Aufgaben. Lernen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

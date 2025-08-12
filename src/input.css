@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@custom-variant hover (&:hover);
+
+.sidebarButton {
+  @apply w-[110px] h-[31px] ml-[6px] bg-[#2A2E2A]/60 outline-[1.5px] outline-[#90FF8D]/60 font-[550] tracking-wider rounded-[8px] shadow-black/60 shadow-[1px_3px_4px] transition duration-100 ease-in-out hover:bg-[#90FF8D]/60 active:bg-[#90FF8D]/30 active:scale-102 hover:shadow-[3px_6px_5px] hover:scale-103 cursor-pointer;
+}
+
+.cardStyle {
+  @apply relative overflow-hidden w-[223px] h-[315px] rounded-[8px] outline-[0.75px] outline-[#90FF8D]/50 bg-[#202120] transition ease-in-out hover:outline-[#90FF8D]/80 hover:outline-offset-1 hover:scale-101 hover:cursor-pointer;
+}
+
+.cardStyleClicked {
+  @apply scale-106 hover:scale-106 outline-[#90FF8D]/80 outline-offset-1
+}
+
+.clicked {
+  @apply bg-[#90FF8D]/50 shadow-[3px_6px_5px] scale-102;
+}
+
+@theme {
+  --font-primary: "Inter", "sans-serif";
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+  < .scrollbar::-webkit-scrollbar-track {
+    background-color: #90FF8D;
+    opacity: 0.5;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #62824d;
+    border-radius: 4px;
+  }
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #7da662;
+    border-radius: 4px;
+  }
+}
+

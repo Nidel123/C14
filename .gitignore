@@ -1,0 +1,30 @@
+# Node/Vite
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+package-lock.json
+
+# Tauri / Rust
+src-tauri/target/
+target/
+src-tauri/gen/
+*.pdb
+*.dmp
+
+# Platform/IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.log
+
+# Misc tool caches
+.parcel-cache/
+.turbo/
+.next/
+.nuxt/
+.out/
+.expo/
+web-build/

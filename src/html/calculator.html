@@ -1,0 +1,41 @@
+<link href="../output.css" rel="stylesheet" />
+
+<div id="calculatingButtonContainer" class="absolute ml-[28px] pt-[69px] z-10">
+  <input
+    id="percentInput"
+    onkeydown="checkKey(event)"
+    type="number"
+    placeholder="Eingabe Prozent"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    maxlength="5"
+    class="w-[165px] h-[36px] pl-1 shadow-black shadow-[2px_2px_4px] transition duration-150 ease-in-out hover:outline-[#90FF8D]/70 hover:outline-offset-1 placeholder-white/60 text-[12px] text-white rounded-[8px] outline-[#90FF8D]/50 outline-[0.75px] bg-[#202120] [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
+  />
+  <p
+    id="outPutTextPercent"
+    class="h-[18.5px] text-[9px] pt-[5px] opacity-70"
+  ></p>
+  <input
+    id="ageInput"
+    onkeydown="checkKey(event)"
+    type="number"
+    placeholder="Eingabe Alter"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    maxlength="7"
+    class="w-[165px] h-[36px] pl-1 mt-[11px] shadow-black shadow-[2px_2px_4px] transition duration-150 ease-in-out hover:outline-[#90FF8D]/70 hover:outline-offset-1 placeholder-white/60 text-[12px] text-white rounded-[8px] outline-[#90FF8D]/50 outline-[0.75px] bg-[#202120] [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
+  />
+  <p id="outPutTextAge" class="h-[18.5px] text-[9px] pt-[5px] opacity-70"></p>
+  <button
+    onclick="redDotCalc()"
+    class="bottom-4 mt-[11px] pl-[1px] w-[110px] h-[31px] bg-[#242624] outline-[1.5px] outline-[#90FF8D]/50 text-white/90 text-[12px] rounded-[8px] shadow-black/60 shadow-[1px_3px_4px] transition duration-100 ease-in-out hover:bg-[#90FF8D]/50 active:bg-[#90FF8D]/30 active:scale-101 hover:scale-102 hover:cursor-pointer"
+  >
+    Berechnen
+  </button>
+</div>
+<div
+  id="graphContainer"
+  class=" absolute top-7 right-7 float-right shadow-black shadow-[1px_2px_4px] outline-[#90FF8D]/50 outline-[0.75px] rounded-[8px] w-[498px] h-[480px]"
+>
+  <canvas id="graph" width="498" height="480"></canvas>
+</div>
+
+<script type="module" src="../javaScript/charts.js"></script>
